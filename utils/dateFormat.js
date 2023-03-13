@@ -4,6 +4,7 @@ const addDateSuffix = (date) => {
     // Get last character of the date string to determine suffix
     const lastChar = dateStr.charAt(dateStr.length - 1);
   
+    // If the last character is a 1, add an 'st' to the end of the date string
     if (lastChar === '1' && dateStr !== '11') {
       dateStr = `${dateStr}st`;
     } else if (lastChar === '2' && dateStr !== '12') {
@@ -42,13 +43,15 @@ const addDateSuffix = (date) => {
     const formattedMonth = months[dateObj.getMonth()];
   
     let dayOfMonth;
-  
+    
+    // If dateSuffix is true, add a suffix to the date
     if (dateSuffix) {
       dayOfMonth = addDateSuffix(dateObj.getDate());
     } else {
       dayOfMonth = dateObj.getDate();
     }
-  
+    
+    // Get year, day, month, and time
     const year = dateObj.getFullYear();
     let hour =
       dateObj.getHours() > 12
@@ -58,11 +61,12 @@ const addDateSuffix = (date) => {
     if (hour === 0) {
       hour = 12;
     }
-  
+    
+    // Format minutes
     const minutes = (dateObj.getMinutes() < 10 ? '0' : '') + dateObj.getMinutes();
     const ampm = dateObj.getHours() >= 12 ? 'pm' : 'am';
   
-    const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${ampm}`;
+    const formattedTimeStamp = `${formattedMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${ampm}`; // January 1st, 1970 at 12:00 am
   
     return formattedTimeStamp;
   };
