@@ -30,15 +30,15 @@ const UserSchema = new Schema(
   {
     toJSON: {
       virtuals: true, 
-      getters: true
+      getters: true // this line is to show the virtuals in the response
     },
-    id: false
+    id: false // prevents virtuals from creating duplicate of _id as `id`
   }
 );
 
 UserSchema.virtual('friendCount').get(function () {
   return this.friends.length;
-});
+}); // this is a virtual that retrieves the length of the user's friends array field on query
 
 const User = model('User', UserSchema);
 

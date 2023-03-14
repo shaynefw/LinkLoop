@@ -3,7 +3,7 @@ const db = require('./config/connection');
 const userRoutes = require('./routes/user-routes');
 const thoughtRoutes = require('./routes/thought-routes');
 
-const PORT = 3002;
+const PORT = 3001;
 const app = express();
 
 app.use(express.urlencoded({ extended: true }));

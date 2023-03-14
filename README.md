@@ -15,7 +15,7 @@ This is a social media API that allows users to create an account, create though
 
 - [Project repo](https://github.com/shaynefw/LinkLoop)
 - [Project deployed link](https://shaynefw.github.io/LinkLoop/)
-- [Project Video Demo]()
+- [Project Video Demo](https://drive.google.com/file/d/1R-E1ibu4GMM7to8QzFXPr7wHMW6QeJfj/view?usp=sharing)
 
 ## Usage
 
@@ -33,7 +33,7 @@ This is a social media API that allows users to create an account, create though
 
 7. View the response in the "Response" pane, and make any necessary adjustments to your request or server code.
 
-![screenShot]()
+![screenShot](./public/assets/images/ss.png)
 
 ## Credits
 
@@ -66,9 +66,7 @@ SOFTWARE.
 
 ## Badges
 
-![HTML](https://img.shields.io/badge/HTML-NUMBER%25-orange)
-![CSS](https://img.shields.io/badge/CSS-NUMBER%25-blue)
-![JavaScript](https://img.shields.io/badge/JavaScript-NUMBER%25-yellow)
+![JavaScript](https://img.shields.io/badge/JavaScript-100%25-yellow)
 
 ## Features
 

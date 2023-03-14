@@ -10,7 +10,13 @@ const thoughtController = {
       })
       .select("-__v")
       .sort({ createdAt: -1 })
-      .then((dbThoughtData) => res.json(dbThoughtData))
+      .then((dbThoughtData) => {
+        if (dbThoughtData.length === 0) {
+          res.status(404).json({ message: "No thoughts found" });
+        } else {
+          res.json(dbThoughtData);
+        }
+      })
       .catch((err) => {
         console.log(err);
         res.status(500).json(err);
